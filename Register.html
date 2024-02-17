@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+
+    <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container-fluid  p-0" style="height: 100vh;width: 100vw;">
+        <!-- Navbar start -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm px-5 py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Resume <span class="text-primary">Builder</span></a>
+                <button class="btn btn-primary text-capitalize" type="submit">create account</button>
+            </div>
+        </nav>
+        <!-- Navbar Ends -->
+
+        <div class="container d-flex align-items-center justify-content-center" style="height: 80%;width: 100%;">
+            <div class="row" style="width: 100%;height:auto;">
+                <div class="col-md-6 p-5">
+                    <h1 class="fw-semibold pt-5" style="font-size: 45px;">The <br> <span
+                            class="text-primary">Best</span> Free <br><span>Online Resume</span> Builder</h1>
+                    <h5>A Quick and Easy Way to Create Your Professional Resume.</h5>
+                </div>
+
+
+                <!-- SIGNUP FORM  -->
+                <div class="signup col-md-6 col-lg-4 card bg-white">
+                    <div class="card-body pt-5">
+                        <!-- Hading start -->
+                        <h5 class="text-center mb-3">Welcome to <span class="text-primary">Resume Builder</span>
+                        </h5>
+                        <div class="custom-toggle-button p-1 mx-5 d-flex flex-nowrap align-items-center justify-content-center rounded-pill"
+                            style="background-color: #ebf2fc;">
+                            <button type="button" class="btn btn-primary rounded-pill"
+                                style="width: 100%;font-size: 13px;" onclick="handleShowSignup()"
+                                id="toggle-signup">SignUp</button>
+                            <button type="button" class="btn  border border-0 text-primary rounded-pill"
+                                style="width: 100%;font-size: 13px;" onclick="handleShowsignin()"
+                                id="toggle-signin">SignIn</button>
+                        </div>
+                        <!-- Hading start -->
+
+                        <!-- SIGNUP FORM START HERE -->
+                        <form action="" class="px-3 pt-5 pb-3" id="signup">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" style="font-size: 14px;">Email
+                                    address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter Your Email Address" style="font-size: 13px;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"
+                                    style="font-size: 14px;">Password</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter Your Password" style="font-size: 13px;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"
+                                    style="font-size: 14px;">Confirm Password</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter Your Confirm Password" style="font-size: 13px;">
+                            </div>
+                            <button type="submit" class="btn btn-danger ms-auto d-block px-5 py-2 mt-4"
+                                style="font-size: 13px;">Sign Up</button>
+                        </form>
+                        <!-- SIGNUP FORM ENDS HERE -->
+
+
+                        <!-- SIGNIN FORM START HERE -->
+                        <form action="" class="d-none px-3 pt-5 pb-3" id="signin">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" style="font-size: 14px;">Email
+                                    address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter Your Email Address" style="font-size: 13px;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"
+                                    style="font-size: 14px;">Password</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter Your Password" style="font-size: 13px;">
+                            </div>
+                            <button type="submit" class="btn btn-danger ms-auto d-block px-5 py-2 mt-4"
+                                style="font-size: 13px;">Sign In</button>
+                        </form>
+                        <!-- SIGNIN FORM ENDS HERE -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Signup form ends -->
+
+    </div>
+</body>
+<!-- Bootstrap Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+
+<script>
+    let signup = document.getElementById("signup");
+    let signin = document.getElementById("signin");
+
+    let toggleSignIn = document.getElementById("toggle-signin");
+    let toggleSignUp = document.getElementById("toggle-signup");
+
+    function handleShowSignup() {
+        if (signup.classList.contains("d-none")) {
+            // show signup
+            signup.classList.remove("d-none");
+            // hide signin
+            signin.classList.add("d-none");
+
+            // btn
+            if (!toggleSignUp.classList.contains("btn-primary")) {
+                toggleSignUp.classList.add("btn-primary");
+                toggleSignUp.classList.remove("text-primary");
+                toggleSignIn.classList.remove("btn-primary");
+                toggleSignIn.classList.add("text-primary");
+            }
+            else {
+                toggleSignUp.classList.remove("btn-primary");
+                toggleSignUp.classList.add("text-primary");
+                toggleSignIn.classList.add("btn-primary");
+                toggleSignIn.classList.remove("text-primary");
+            }
+
+        }
+    }
+
+    function handleShowsignin() {
+        if (signin.classList.contains("d-none")) {
+            // show signin
+            signin.classList.remove("d-none");
+            // hide signup
+            signup.classList.add("d-none");
+
+            // btn
+            // btn
+            if (!toggleSignIn.classList.contains("btn-primary")) {
+                toggleSignIn.classList.add("btn-primary");
+                toggleSignIn.classList.remove("text-primary");
+                toggleSignUp.classList.remove("btn-primary");
+                toggleSignUp.classList.add("text-primary");
+            }
+            else {
+                toggleSignIn.classList.remove("btn-primary");
+                toggleSignIn.classList.add("text-primary");
+                toggleSignUp.classList.add("btn-primary");
+                toggleSignUp.classList.remove("text-primary");
+            }
+        }
+    }
+</script>
+
+</html>
